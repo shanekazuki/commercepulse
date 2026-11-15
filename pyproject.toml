@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "commercepulse"
+version = "0.1.0"
+description = "Local-first retail sales ETL and Databricks Delta ELT portfolio project"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+mysql = ["PyMySQL>=1.1,<2"]
+
+[project.scripts]
+commercepulse = "commercepulse.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["commercepulse*"]
